@@ -53,10 +53,22 @@
 nav {
     width: 100%;
     background: var(--color-primary);
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     padding: 1.5rem;
     font-family: 'Poppins', sans-serif;
+}
+
+nav .menu-icon {
+    position: relative;
+    margin-right: 1rem;
+}
+
+nav .menu-icon span {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
 }
 
 nav .logo {
@@ -79,7 +91,6 @@ nav .nav-links a {
     border-radius: var(--border-radius-1);
     cursor: pointer;
     transition: 0.5s;
-    margin: 0 2rem 0 0 ;
 }
 
 nav .nav-links a.active {
@@ -563,3 +574,105 @@ hr {
     margin-top: 20px;
     height: 1px;
 }
+
+/*======MEDIA QUERIES======*/
+@media (max-width: 768px) {
+    nav .logo {
+        font-size: 2rem;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .nav-links a.active {
+        margin-top: 10px;
+    }
+
+    nav .nav-links a {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .objectives .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .objectives .cards .card {
+        margin:1px auto;
+    }
+
+    footer .end {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    footer .end .footer-cols {
+        margin-left: 30vw;
+    }
+
+    .homepage {
+        height: 120vh;
+    }
+
+    /*ABOUT US*/
+    .about-us .about {
+        display: block;
+        justify-content: center;
+        height: 270vh;
+    }
+
+    .about-us .about .about-img {
+        margin-left: 18vw;
+    }
+
+    .about-us .about .about-img img {
+        margin-top: 1rem;
+    }
+
+    .about-us .about .about-text {
+        margin-left: 18vw;
+    }
+
+    /*SERVIVES PAGE*/
+
+    .services .services-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services .services-cards .services-card {
+        margin: 1px auto;
+        width: 45vw;
+        height: 90vh;
+    }
+
+    /****contact-us -page******/
+    .contact-us .phone .left {
+        display: none;
+    }
+
+    .contact-us {
+        display: inline-block;
+        height: 150vh;
+    }
+
+    .contact-us .phone {
+        border: none;
+    }
+
+    .contact-us .phone .right {
+        width: 60vw;
+        margin:1px auto;
+    }
+
+
+}   
